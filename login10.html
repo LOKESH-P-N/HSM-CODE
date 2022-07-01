@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title>
+        
+    </head>
+    
+
+	
+<body>
+	<link rel="stylesheet" href="login10.css">
+	
+	<div class="topnav">
+
+  <a class="active" href="#home">Home</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  
+</div> 
+<div class="header">
+<center>
+  EMPLOYEE MANAGEMENT SYSTEM
+</center>
+  
+  </div>
+<center><h2>LOGIN</h2></center><br>
+<br><br>
+ <center> 
+  <title>FORM</title>
+  <script>
+    function validate(){
+      var username=document.getElementById("uname");
+      var Password=document.getElementById("pass");
+      if(username.value.trim()==""){
+        //alert("no username");
+        uname.style.border="solid 2px red";
+        document.getElementById("label1").style.visibility="visible";
+        return false;
+      }
+      
+      else if(Password.value.trim()==""){
+        alert("no password");
+        document.getElementById("label1").style.visibility="visible";
+        return false;
+      }
+
+        else if(Password.value.trim().length<5){
+        alert(" password is weak");
+        document.getElementById("label1").style.visibility="visible";
+        return false;
+      }
+        else
+      {
+        true
+      }
+
+      
+    }
+  </script>
+</head>
+<body>
+<!--<form onsubmit=" return validate()" action="tablebuttons.html">-->
+
+  <form action="welcome.php" method="post">
+  
+<center>
+<div class="container">
+    <label for="uname"><b>Username22</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+    <button type="submit">Login</button>&nbsp &nbsp
+    <button type="button" class="cancelbtn">Cancel</button><br><br>
+   
+<span class="psw">Forgot <a href="#">password?</a></span>
+</center>
+</div>
+</center>
+</form>
+
+</body>
+</html>
